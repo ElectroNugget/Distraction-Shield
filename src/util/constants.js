@@ -2,7 +2,7 @@
 export const defaultExerciseSites = [
   {
     "hostname": "www.sololearn.com",
-    "href": "http://sololearn.com",
+    "href": "https://www.sololearn.com/",
     "pathname": "/",
     "regex": "*://*.www.sololearn.com/*",
     "tld": "com",
@@ -12,7 +12,7 @@ export const defaultExerciseSites = [
   },
   {
     "hostname": "www.codecademy.com",
-    "href": "http://codecademy.com",
+    "href": "https://www.codecademy.com/learn",
     "pathname": "/",
     "regex": "*://*.www.codecademy.com/*",
     "tld": "com",
@@ -22,18 +22,28 @@ export const defaultExerciseSites = [
   },
   {
     "hostname": "www.scrimba.com",
-    "href": "http://scrimba.com",
+    "href": "https://scrimba.com/",
     "pathname": "/",
     "regex": "*://*.www.scrimba.com/*",
     "tld": "com",
     "domain": "scrimba",
     "subdomain": "www",
-    "name": "SCrimba"
+    "name": "Scrimba"
+  },
+  {
+    "hostname": "www.khanacademy.org",
+    "href": "https://www.khanacademy.org/",
+    "pathname": "/",
+    "regex": "*://*.www.khanacademy.org/*",
+    "tld": "com",
+    "domain": "khanacademy",
+    "subdomain": "www",
+    "name": "Khan Academy"
   }
 ];
 
 //Defaults for exercise duration and timeout are also set here.
-export const defaultExerciseSite = defaultExerciseSites[0];
+export const defaultExerciseSite = defaultExerciseSites[3];
 
 export const defaultexerciseDuration = 1 * 10 * 1000; // 10 seconds
 

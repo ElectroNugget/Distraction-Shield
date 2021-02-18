@@ -32,7 +32,8 @@ class ExerciseOptions extends React.Component {
     getFromStorage('currentExerciseSite', 'exerciseSites', 'exerciseDuration', 'timeWastedDuration')
       .then(res => {
         let currentExerciseSite = res.currentExerciseSite || defaultExerciseSite.name;
-        let exerciseSites = res.exerciseSites || defaultExerciseSites;
+        //let exerciseSites = res.exerciseSites || defaultExerciseSites;
+        let exerciseSites = defaultExerciseSites; //Needed to change the above line to this to allow selecting from multiple exercise sites, not 100% sure how it works atm.
         let exerciseDuration = res.exerciseDuration || defaultexerciseDuration;
         let timeWastedDuration = res.timeWastedDuration || defaultTimeout;
         if (exerciseSites.length === 0) currentExerciseSite = '';
@@ -122,7 +123,6 @@ class ExerciseOptions extends React.Component {
         <Col style={{ textAlign: 'center' }}>
           <Select
             value={this.state.currentExerciseSite}
-            disabled="false"
             showArrow={true}
             style={{ width: 170 }}
             onChange={(e) => this.setCurrentExerciseSite(e)}
