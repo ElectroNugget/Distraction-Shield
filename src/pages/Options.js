@@ -9,6 +9,7 @@ import { addStorageListener, getFromStorage } from '../util/storage';
 import './Options.css';
 const { Header, Content, Footer } = Layout;
 
+//These are the columns for the 'Time Wasting Websites' part of the Settings page.
 const columns = [
   {
     title: 'Page Name',
@@ -108,6 +109,7 @@ class Options extends React.Component {
     this.setup();
   }
 
+  //Grabs blocked URLs from util/storage
   setup() {
     getFromStorage('blockedUrls').then(res => {
       let blockedUrls = res.blockedUrls || [];
@@ -137,7 +139,7 @@ class Options extends React.Component {
             <Col span={11} offset={1}>
             <header className="Options-subheader">
               <i> 
-                Exchange your procrastination into microlearnings 
+                Stop procrastinating and start learning! 
               </i>
             </header>
             </Col>
@@ -160,7 +162,7 @@ class Options extends React.Component {
                         (obj, key) => ({ ...obj, key })
                       )} />
                 <h4> 
-                  NB: You can still use these websites, Aiki is only suggesting you spend a little time learning each time.
+                  NB: You can still use these websites, Aiki is only suggesting you spend a little time learning each time you visit them.
                 </h4>
               </Card>
             </Col>
@@ -169,6 +171,7 @@ class Options extends React.Component {
             <Col className="grid-col">
               <h4 className="grid-col-title">Language learning settings</h4>
               <Card className="grid-card">
+                {/* Here's our options component, can choose sites/time here. */}
                 <ExerciseOptions />
               </Card>
             </Col>
@@ -177,12 +180,13 @@ class Options extends React.Component {
             <Col className="grid-col">
               <h4 className="grid-col-title">Statistics</h4>
               <Card className="grid-card">
+                {/* Here's our statistics component, can visualize user statistics here. */}
                 <Statistics />
               </Card>
             </Col>
           </Row>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>IT University of Copenhagen © 2020</Footer>
+        <Footer style={{ textAlign: 'center' }}>IT University of Copenhagen © 2021</Footer>
       </Layout>
     );
   }
