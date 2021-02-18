@@ -12,9 +12,9 @@ The user can choose for which sites the redirection should happen, by adding dom
 
 ## Building
 
-You must use what 
+You must use the `whatWork` branch to run the program currently. `main` has some issues that we will not be fixing. We plan to eventually clean up the repository once we have solved some of the problems in other branches.  
 
-Build by first running `yarn` and then building the project:
+Once you are on the `whatWork` branch, build by first running `yarn` and then building the project:
 
 ```shell
 yarn build
