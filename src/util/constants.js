@@ -1,28 +1,39 @@
+//Default learning sites are set here.
 export const defaultExerciseSites = [
   {
-    "hostname": "web.hellotalk.com",
-    "href": "https://web.hellotalk.com/",
+    "hostname": "www.sololearn.com",
+    "href": "http://sololearn.com",
     "pathname": "/",
-    "regex": "*://*.web.hellotalk.com/*",
+    "regex": "*://*.www.sololearn.com/*",
     "tld": "com",
-    "domain": "hellotalk",
-    "subdomain": "web",
-    "name": "Hellotalk"
+    "domain": "sololearn",
+    "subdomain": "www",
+    "name": "SoloLearn"
   },
   {
-    "hostname": "www.zeeguu.org",
-    "href": "http://zeeguu.org/aiki",
+    "hostname": "www.codecademy.com",
+    "href": "http://codecademy.com",
     "pathname": "/",
-    "regex": "*://*.www.zeeguu.org/*",
-    "tld": "org",
-    "domain": "zeeguu",
+    "regex": "*://*.www.codecademy.com/*",
+    "tld": "com",
+    "domain": "codecademy",
     "subdomain": "www",
-    "name": "Zeeguu"
+    "name": "Codecademy"
+  },
+  {
+    "hostname": "www.scrimba.com",
+    "href": "http://scrimba.com",
+    "pathname": "/",
+    "regex": "*://*.www.scrimba.com/*",
+    "tld": "com",
+    "domain": "scrimba",
+    "subdomain": "www",
+    "name": "SCrimba"
   }
-  // 'https://www.brainscape.com/'
 ];
 
-export const defaultExerciseSite = defaultExerciseSites[1];
+//Defaults for exercise duration and timeout are also set here.
+export const defaultExerciseSite = defaultExerciseSites[0];
 
 export const defaultexerciseDuration = 1 * 10 * 1000; // 10 seconds
 
