@@ -118,7 +118,7 @@ class ExerciseOptions extends React.Component {
       <>
       <Row>
         <h4 style={{ textAlign: 'center'}}>
-          Your language learning portal:
+          Your learning portal:
         </h4>
         <Col style={{ textAlign: 'center' }}>
           <Select
