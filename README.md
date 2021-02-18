@@ -12,6 +12,8 @@ The user can choose for which sites the redirection should happen, by adding dom
 
 ## Building
 
+You must use what 
+
 Build by first running `yarn` and then building the project:
 
 ```shell
