@@ -1,4 +1,4 @@
-# Aiki
+# Aiki 3.0
 
 ## General Information
  
@@ -21,13 +21,6 @@ yarn build
 ```
 
 Project will be built under `/build`.
-
-If you have trouble at this stage, try running:
-
-```shell
-npm install
-npm install react-scripts
-```
 
 ## Running in Chrome
 

@@ -23,7 +23,7 @@ class ExerciseOptions extends React.Component {
     newExerciseSite: null
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     addStorageListener(() => this.setup());
     this.setup();
   }
@@ -32,7 +32,8 @@ class ExerciseOptions extends React.Component {
     getFromStorage('currentExerciseSite', 'exerciseSites', 'exerciseDuration', 'timeWastedDuration')
       .then(res => {
         let currentExerciseSite = res.currentExerciseSite || defaultExerciseSite.name;
-        let exerciseSites = res.exerciseSites || defaultExerciseSites;
+        //let exerciseSites = res.exerciseSites || defaultExerciseSites;
+        let exerciseSites = defaultExerciseSites; //Needed to change the above line to this to allow selecting from multiple exercise sites, not 100% sure how it works atm.
         let exerciseDuration = res.exerciseDuration || defaultexerciseDuration;
         let timeWastedDuration = res.timeWastedDuration || defaultTimeout;
         if (exerciseSites.length === 0) currentExerciseSite = '';
@@ -46,19 +47,13 @@ class ExerciseOptions extends React.Component {
     setInStorage({ currentExerciseSite }).then(() => {
       this.setState({ currentExerciseSite });
     });
-    await setFirebaseData({ currentExerciseSite }).then(() => {
-      this.setState({ currentExerciseSite });
-    })
   }
 
   // time is a moment object
-  async setExerciseDuration(time) {
+  setExerciseDuration(time) {
     const exerciseDuration = time.valueOf();
     setInFirebase({ exerciseDuration });
     setInStorage({ exerciseDuration }).then(() => {
-      this.setState({ exerciseDuration });
-    });
-    await setFirebaseData({ exerciseDuration }).then(() => {
       this.setState({ exerciseDuration });
     });
   }
@@ -123,13 +118,12 @@ class ExerciseOptions extends React.Component {
       <>
       <Row>
         <h4 style={{ textAlign: 'center'}}>
-          Your language learning portal:
+          Your learning portal:
         </h4>
         <Col style={{ textAlign: 'center' }}>
           <Select
             value={this.state.currentExerciseSite}
-            disabled="true"
-            showArrow={false}
+            showArrow={true}
             style={{ width: 170 }}
             onChange={(e) => this.setCurrentExerciseSite(e)}
           >
@@ -144,6 +138,7 @@ class ExerciseOptions extends React.Component {
               }
             )}
           </Select><br/>
+          {/* This commented out code creates two buttons that allow you to add and remove websites from the learning list. Do not remove!! */}
           {/* <Button ghost 
             onClick={() => this.setAddSiteModalVisible(true)}
             style={{ margin:'5px', color: '#40a9ff' }}>
