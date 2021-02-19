@@ -138,8 +138,8 @@ class ExerciseOptions extends React.Component {
               }
             )}
           </Select><br/>
-          {/* This commented out code creates two buttons that allow you to add and remove websites from the learning list. Do not remove!! */}
-          {/* <Button ghost 
+          {/* This below Button and Modal creates two buttons that allow you to add and remove websites from the learning list. Do not remove!! */}
+          <Button ghost 
             onClick={() => this.setAddSiteModalVisible(true)}
             style={{ margin:'5px', color: '#40a9ff' }}>
             Add
@@ -178,7 +178,7 @@ class ExerciseOptions extends React.Component {
                       alt='favicon'
                       src={`${s2}${this.state.newExerciseSite.hostname}`} />
                   }/>
-          </Modal> */}
+          </Modal>
         </Col>
       </Row>
       <Divider />
