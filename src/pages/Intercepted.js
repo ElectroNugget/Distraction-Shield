@@ -1,5 +1,5 @@
 import React from 'react';
-import { Progress, message, Icon, Row, Col, Button, Empty } from 'antd';
+import { Progress, message, Icon, Row, Col, Button, Empty } from 'antd'; //Ant Design, 'worlds second most popular react UI'.
 import { getFromStorage, setInStorage, setInFirebase } from '../util/storage';
 import {
     defaultExerciseSite,
@@ -30,7 +30,7 @@ class Intercepted extends React.Component {
 
     componentDidMount() {
         message.open({
-            content: "Let's do something useful before having fun!",
+            content: "Let's do some learning before having fun!",
             icon: <Icon type="smile" />
         });
 
@@ -142,7 +142,7 @@ class Intercepted extends React.Component {
 
     onContinue() {
         this.timeout();
-        setInFirebase('Succes');
+        setInFirebase('Success');
         this.setState({closeSuccess: true});
     }
 

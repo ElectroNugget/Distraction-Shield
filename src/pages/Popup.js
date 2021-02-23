@@ -2,7 +2,7 @@
 import React from 'react';
 import logo from '../images/aikido.png';
 import './Popup.css';
-import { Switch, Button, Row, Col } from 'antd';
+import { Switch, Button, Row, Col } from 'antd';  //Ant Design, 'worlds second most popular react UI'.
 import {
   blockCurrentWebsite,
   isCurrentWebsiteBlocked,
