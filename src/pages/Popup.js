@@ -15,10 +15,6 @@ import {
   setInFirebase
 } from '../util/storage';
 
-/* Using this to get the URL in the same way the button in the intercepted.js gets the website name and URL... Might want to move
-some of that functionality over here if we drop intercepted.js from the project.*/
-import {getUrl, parseUrl, state, onSkip, onContinue} from './Intercepted.js'
-
 class Popup extends React.Component {
   state = {
     currentBlocked: false,
