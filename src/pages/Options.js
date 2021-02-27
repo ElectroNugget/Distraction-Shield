@@ -1,4 +1,4 @@
-import { Button, Card, Col, Input, Layout, Row, Switch, Table, Tag } from 'antd';
+import { Button, Card, Col, Input, Layout, Row, Switch, Table, Tag } from 'antd';  //Ant Design, 'worlds second most popular react UI'.
 import moment, { duration } from 'moment';
 import React from 'react';
 import ExerciseOptions from '../components/options/ExerciseOptions';

@@ -1,7 +1,7 @@
 /* global chrome */
 import { message } from 'antd';
-import Autolinker from 'autolinker';
-import UrlParser from 'url-parse';
+import Autolinker from 'autolinker'; //Utility to automatically link the URLs, email addresses, phone numbers, hashtags, and mentions in a given block of text/HTML
+import UrlParser from 'url-parse'; 
 import parseDomain from 'parse-domain';
 import { getFromStorage, setInStorage, setInFirebase } from './storage';
 import { defaultExerciseSites } from './constants';
@@ -86,7 +86,7 @@ export const addExerciseSite = async url => {
     let alreadyIn = exerciseSites.find(site => site.name === url.name);
     if (!alreadyIn) {
         exerciseSites.push(url);
-        message.success(`Added exercise site!`); // @TODO make messages like in blockWebsite()
+        message.success(`${url.name} is now added as an exercise site`);
     } else {
         message.error('Duplicate exercise site name');
     }
