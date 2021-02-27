@@ -56,11 +56,6 @@ class Popup extends React.Component {
     isCurrentWebsiteBlocked().then(currentBlocked => {
       this.setState({ currentBlocked });
     });
-
-    //ADDING THIS TO GET THE SITE NAME I HOPE IT WORKS
-    //DON'T KNOW HOW/WHEN TO GET THESE NAMES AND INSERT THEM
-    //let url = parseUrl(this.getUrl());
-    //let nameOfSite = url && url.name
   }
 
   onSwitchChangeExtension(enabled) {
@@ -98,11 +93,6 @@ class Popup extends React.Component {
   }
 
   render() {
-
-    //Added these to see if I can get sitenames here!
-    //let url = parseUrl(getUrl());
-    //let nameOfSite = url && url.name
-
     return (
       <div className="Popup">
         <header className="Popup-header">
@@ -168,10 +158,9 @@ class Popup extends React.Component {
         </Row>
 
         {/* NEW BUTTONS GO HERE */}
+        {/* These are not currently functional, commented out text is tied to functionality in Intercepted.js, just
+        left here so we can try to understand and reproduce that functionality here later. */}
         <Row className="Popup-body">
-          {/* <Col span={14} className="Popup-statistics-title">
-            Continue to your site
-          </Col> */}
           <Button className="success-button"
               type="primary" 
               icon="login"
@@ -183,9 +172,6 @@ class Popup extends React.Component {
           </Button>
         </Row> 
         <Row className="Popup-body-bottom">
-        {/* <Col span={14} className="Popup-statistics-title">
-            Emergency skip!
-        </Col> */}
         <Button className="skip-button"
           type="dashed"
           size="small"
