@@ -245,4 +245,5 @@ class Intercepted extends React.Component {
         );
     }
 }
+
 export default Intercepted;

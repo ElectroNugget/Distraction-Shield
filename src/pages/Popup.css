@@ -55,3 +55,7 @@
 .Popup-logo {
   width: 30px;
 }
+
+.skip-button {
+  opacity:0.4;
+}
